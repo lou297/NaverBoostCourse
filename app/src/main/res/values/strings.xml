@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">씨네마천국</string>
+
+    //MovieInform
+    <string name="MovieTitle">군도</string>
+    <string name="MoviePlayDate">2014.07.23</string>
+    <string name="MoviePlayDateString">개봉</string>
+    <string name="MovieGenre">액션</string>
+    <string name="MovieShowTimes">137</string>
+    <string name="Minutes">분</string>
+
+    <string name="TicketSales">예매율</string>
+    <string name="TicketRank">5</string>
+    <string name="TicketRankString">위</string>
+    <string name="TicketPercents">1.8</string>
+    <string name="MovieCredits">8.2</string>
+    <string name="MovieCreditsString">평점</string>
+    <string name="TotalAttendance">839,399</string>
+    <string name="TotalAttendanceString">누적관객수</string>
+
+    <string name="StoryLine">군도, 백성을 구하라!\n
+        양반과 탐관오리들의 착취가 극에 달했던 조선 철종 13년. 힘 없는 백성의 편이 되어
+        세상을 바로잡고자 하는 의적떼인 군도(群盜), 지리산 추설이 있었다.\n\n
+
+        쌍칼 도치 vs 백성의 적 조윤\n
+        잦은 자연재해, 기근과 관의 횡포까지 겹쳐 백성들의 삶이 날로 피폐해 져 가는 사이,
+        나주 대부호의 서자로 조선 최고의 무관 출신인 조윤은 극악한 수법으로 양민들을 수탈,
+        삼남지방 최고의 대부호로 성장한다. 한편 소, 돼지를 잡아 근근이 살아가던 천한 백정 돌무치는
+        죽어도 잊지 못할 끔찍한 일을 당한 뒤 군도에 합류. 지리산 추설의 신 거성(新 巨星) 도치로 거듭난다.\n\n
+
+        뭉치면 백성, 흩어지면 도적!\n
+        망할 세상을 뒤집기 위해, 백성이 주인인 새 세상을 향해 도치를 필두로 한 군도는 백성의 적,
+        조윤과 한 판 승부를 시작하는데&#8230;</string>
+    <string name="StoryLineString">줄거리</string>
+
+    <string name="DirectorAndActorString">감독/출연</string>
+    <string name="Director">윤종빈</string>
+    <string name="DirectorString">감독</string>
+    <string name="Actor">하정우(도치), 강동원(조윤)</string>
+    <string name="ActorString">출연</string>
+    
+    
+    //Comment 부분
+    <string name="CommentString">한줄평</string>
+    <string name="WriteCommentString">작성하기</string>
+    <string name="SeeAllComment">모두 보기</string>
+    <string name="ReservationString">예매하기</string>
+    
+    <string name="RecommendString">추천 0 </string>
+    <string name="ReportString">신고하기</string>
+
+</resources>
