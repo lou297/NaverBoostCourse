@@ -9,6 +9,10 @@
         android:roundIcon="@drawable/ic_app"
         android:supportsRtl="true"
         android:theme="@style/AppTheme2">
+        <activity android:name=".CommentListActivity"
+            android:label="@string/commentList_label"></activity>
+        <activity android:name=".CommentWriteActivity"
+            android:label="@string/commentWrite_label"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

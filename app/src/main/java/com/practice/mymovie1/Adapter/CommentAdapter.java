@@ -11,8 +11,8 @@ import com.practice.mymovie1.View.CommentView;
 import java.util.ArrayList;
 
 public class CommentAdapter extends BaseAdapter {
-    ArrayList<CommentItem> list;
-    Context context;
+    private ArrayList<CommentItem> list;
+    private Context context;
 
     public CommentAdapter(Context context,ArrayList<CommentItem> list){
         this.context = context;
@@ -43,10 +43,8 @@ public class CommentAdapter extends BaseAdapter {
             view = (CommentView) convertView;
         }
         CommentItem item = list.get(position);
-        view.SetCommentId(item.getId());
-        view.SetCommentTime(item.getCommentTime());
-        view.SetCommentRatingBar(item.getCommentRating());
-        view.SetCommnet(item.getComment());
+
+        view.setCommentInfo(item);
         return view;
     }
 }

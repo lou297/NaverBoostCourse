@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/MovieTitle_CommentWrite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ViewingClassImageView_CommentWrite"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/Gray" />
+
+    <RatingBar
+        android:id="@+id/CommentRatingBar_CommentWrite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:numStars="5"
+        android:rating="5"
+        android:stepSize="0.5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/EnterARatingString"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/EditComment_CommentWrite"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/orange_rounded_border"
+        android:gravity="top"
+        android:hint="@string/WithinHundredCharString"
+        android:maxLength="100"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/SaveBut_CommentWrite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/all_view_button_background"
+            android:paddingStart="35dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="35dp"
+            android:paddingBottom="15dp"
+            android:text="@string/Save"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/CancelBut_CommentWrite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/all_view_button_background"
+            android:paddingStart="35dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="35dp"
+            android:paddingBottom="15dp"
+            android:text="@string/Cancel"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

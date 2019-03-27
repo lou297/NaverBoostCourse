@@ -58,6 +58,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/MoviePlayDateView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"
@@ -97,17 +98,11 @@
                         android:textSize="16sp" />
 
                     <TextView
+                        android:id="@+id/MovieShowTimesView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"
                         android:text="@string/MovieShowTimes"
-                        android:textColor="@color/White"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Minutes"
                         android:textColor="@color/White"
                         android:textSize="16sp" />
 
@@ -189,29 +184,20 @@
                     android:padding="5dp">
 
                     <TextView
+                        android:id="@+id/TicketRankView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
                         android:text="@string/TicketRank"
                         android:textColor="@color/DarkGray" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"
-                        android:text="@string/TicketRankString"
-                        android:textColor="@color/DarkGray" />
-
-                    <TextView
+                        android:id="@+id/TicketPercentsView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/TicketPercents"
                         android:textColor="@color/DarkGray" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="%"
-                        android:textColor="@color/DarkGray" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -395,6 +381,7 @@
                     android:src="@drawable/ic_review_selected" />
 
                 <TextView
+                    android:id="@+id/WriteCommentBut_Main"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -406,11 +393,12 @@
             </LinearLayout>
 
             <ListView
-                android:id="@+id/CommentListView"
+                android:id="@+id/CommentListView_Main"
                 android:layout_width="match_parent"
                 android:layout_height="200dp" />
 
             <Button
+                android:id="@+id/ViewAllCommentBut"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@drawable/all_view_button_background"

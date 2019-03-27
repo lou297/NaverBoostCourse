@@ -1,18 +1,21 @@
 <resources>
+    <!--App Title-->
     <string name="app_name">씨네마천국</string>
 
-    //MovieInform
+    <!--Activity Lable-->
+    <string name="commentList_label">한줄평 목록</string>
+    <string name="commentWrite_label">한줄평 작성</string>
+
+    <!--Movie MainActivity-->
     <string name="MovieTitle">군도</string>
-    <string name="MoviePlayDate">2014.07.23</string>
+    <string name="MoviePlayDate">%d.%d.%d</string>
     <string name="MoviePlayDateString">개봉</string>
     <string name="MovieGenre">액션</string>
-    <string name="MovieShowTimes">137</string>
-    <string name="Minutes">분</string>
+    <string name="MovieShowTimes">%d 분</string>
 
     <string name="TicketSales">예매율</string>
-    <string name="TicketRank">5</string>
-    <string name="TicketRankString">위</string>
-    <string name="TicketPercents">1.8</string>
+    <string name="TicketRank">%d위</string>
+    <string name="TicketPercents">%d.%d%%</string>
     <string name="MovieCredits">8.2</string>
     <string name="MovieCreditsString">평점</string>
     <string name="TotalAttendance">839,399</string>
@@ -38,15 +41,24 @@
     <string name="DirectorString">감독</string>
     <string name="Actor">하정우(도치), 강동원(조윤)</string>
     <string name="ActorString">출연</string>
-    
-    
-    //Comment 부분
+
+
+    <!--Comment Item-->
     <string name="CommentString">한줄평</string>
     <string name="WriteCommentString">작성하기</string>
     <string name="SeeAllComment">모두 보기</string>
     <string name="ReservationString">예매하기</string>
-    
-    <string name="RecommendString">추천 0 </string>
+
+    <string name="RecommendString">추천 %d </string>
     <string name="ReportString">신고하기</string>
+
+    <!--Comment List-->
+    <string name="NumOfReviewers_CommentList">(%s명 참여)</string>
+
+    <!--Comment Write-->
+    <string name="EnterARatingString">평점을 입력해 주세요</string>
+    <string name="WithinHundredCharString">100자 이내로 작성해주세요.</string>
+    <string name="Save">저장</string>
+    <string name="Cancel">취소</string>
 
 </resources>

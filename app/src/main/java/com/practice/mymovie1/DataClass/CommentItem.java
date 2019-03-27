@@ -1,10 +1,13 @@
 package com.practice.mymovie1.DataClass;
 
-public class CommentItem {
-    String Id;
-    String CommentTime;
-    float CommentRating;
-    String Comment;
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class CommentItem implements Parcelable {
+    private String Id;
+    private String CommentTime;
+    private float CommentRating;
+    private String Comment;
 
     public CommentItem(String id, String commentTime, float commentRating, String comment) {
         Id = id;
@@ -12,6 +15,22 @@ public class CommentItem {
         CommentRating = commentRating;
         Comment = comment;
     }
+
+    public CommentItem(Parcel in) {
+        readFromParcel(in);
+    }
+
+    public static final Creator<CommentItem> CREATOR = new Creator<CommentItem>() {
+        @Override
+        public CommentItem createFromParcel(Parcel in) {
+            return new CommentItem(in);
+        }
+
+        @Override
+        public CommentItem[] newArray(int size) {
+            return new CommentItem[size];
+        }
+    };
 
     public String getId() {
         return Id;
@@ -43,5 +62,25 @@ public class CommentItem {
 
     public void setComment(String comment) {
         Comment = comment;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(Id);
+        dest.writeString(CommentTime);
+        dest.writeFloat(CommentRating);
+        dest.writeString(Comment);
+    }
+
+    private void readFromParcel(Parcel in){
+        Id = in.readString();
+        CommentTime = in.readString();
+        CommentRating = in.readFloat();
+        Comment = in.readString();
     }
 }
