@@ -41,7 +41,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="5dp"
-                        android:text="@string/MovieTitle"
+                        android:text="@string/movieTitle"
                         android:textColor="@color/White"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -58,18 +58,18 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/MoviePlayDateView"
+                        android:id="@+id/moviePlayDateView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"
-                        android:text="@string/MoviePlayDate"
+                        android:text="@string/moviePlayDate"
                         android:textColor="@color/White"
                         android:textSize="16sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/MoviePlayDateString"
+                        android:text="@string/moviePlayDateString"
                         android:textColor="@color/White"
                         android:textSize="16sp" />
 
@@ -85,7 +85,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"
-                        android:text="@string/MovieGenre"
+                        android:text="@string/movieGenre"
                         android:textColor="@color/White"
                         android:textSize="16sp" />
 
@@ -98,11 +98,11 @@
                         android:textSize="16sp" />
 
                     <TextView
-                        android:id="@+id/MovieShowTimesView"
+                        android:id="@+id/movieShowTimesView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"
-                        android:text="@string/MovieShowTimes"
+                        android:text="@string/movieShowTimes"
                         android:textColor="@color/White"
                         android:textSize="16sp" />
 
@@ -115,14 +115,14 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/ThumbUpBut"
+                        android:id="@+id/thumbUpBut"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_marginEnd="5dp"
                         android:background="@drawable/thumb_up_state" />
 
                     <TextView
-                        android:id="@+id/ThumbUpRate"
+                        android:id="@+id/thumbUpRate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -132,14 +132,14 @@
                         android:textSize="18sp" />
 
                     <Button
-                        android:id="@+id/ThumbDownBut"
+                        android:id="@+id/thumbDownBut"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_marginEnd="5dp"
                         android:background="@drawable/thumb_down_state" />
 
                     <TextView
-                        android:id="@+id/ThumbDownRate"
+                        android:id="@+id/thumbDownRate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -172,7 +172,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:paddingTop="5dp"
-                    android:text="@string/TicketSales"
+                    android:text="@string/ticketSales"
                     android:textColor="@color/DarkGray"
                     android:textSize="16sp" />
 
@@ -184,18 +184,18 @@
                     android:padding="5dp">
 
                     <TextView
-                        android:id="@+id/TicketRankView"
+                        android:id="@+id/ticketRankView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="10dp"
-                        android:text="@string/TicketRank"
+                        android:text="@string/ticketRank"
                         android:textColor="@color/DarkGray" />
 
                     <TextView
-                        android:id="@+id/TicketPercentsView"
+                        android:id="@+id/ticketPercentsView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/TicketPercents"
+                        android:text="@string/ticketPercents"
                         android:textColor="@color/DarkGray" />
 
                 </LinearLayout>
@@ -213,7 +213,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:paddingTop="5dp"
-                    android:text="@string/MovieCreditsString"
+                    android:text="@string/movieCreditsString"
                     android:textColor="@color/DarkGray"
                     android:textSize="16sp" />
 
@@ -238,7 +238,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/MovieCredits"
+                        android:text="@string/movieCredits"
                         android:textColor="@color/DarkGray" />
                 </LinearLayout>
             </LinearLayout>
@@ -254,7 +254,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:paddingTop="5dp"
-                    android:text="@string/TotalAttendanceString"
+                    android:text="@string/totalAttendanceString"
                     android:textColor="@color/DarkGray"
                     android:textSize="16sp" />
 
@@ -263,7 +263,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:padding="5dp"
-                    android:text="@string/TotalAttendance"
+                    android:text="@string/totalAttendance"
                     android:textColor="@color/DarkGray" />
             </LinearLayout>
         </LinearLayout>
@@ -280,7 +280,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="@string/StoryLineString"
+                android:text="@string/storyLineString"
                 android:textColor="@color/Dark"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -288,7 +288,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/StoryLine"
+                android:text="@string/storyLine"
                 android:textColor="@color/DarkGray" />
         </LinearLayout>
 
@@ -304,7 +304,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="@string/DirectorAndActorString"
+                android:text="@string/directorAndActorString"
                 android:textColor="@color/Dark"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -319,13 +319,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:text="@string/DirectorString"
+                    android:text="@string/directorString"
                     android:textColor="@color/Dark" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Director"
+                    android:text="@string/director"
                     android:textColor="@color/DarkGray" />
             </LinearLayout>
 
@@ -339,13 +339,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:text="@string/ActorString"
+                    android:text="@string/actorString"
                     android:textColor="@color/Dark" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Actor"
+                    android:text="@string/actor"
                     android:textColor="@color/DarkGray" />
             </LinearLayout>
 
@@ -369,7 +369,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
-                    android:text="@string/CommentString"
+                    android:text="@string/commentString"
                     android:textColor="@color/Dark"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -381,28 +381,28 @@
                     android:src="@drawable/ic_review_selected" />
 
                 <TextView
-                    android:id="@+id/WriteCommentBut_Main"
+                    android:id="@+id/writeCommentBut_Main"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="2"
-                    android:text="@string/WriteCommentString"
+                    android:text="@string/writeCommentString"
                     android:textColor="@color/Orange"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
             <ListView
-                android:id="@+id/CommentListView_Main"
+                android:id="@+id/commentListView_Main"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="230dp" />
 
             <Button
-                android:id="@+id/ViewAllCommentBut"
+                android:id="@+id/viewAllCommentBut"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@drawable/all_view_button_background"
-                android:text="@string/SeeAllComment"
+                android:text="@string/seeAllComment"
                 android:textColor="@color/Purple"
                 android:textSize="18sp" />
 
@@ -434,7 +434,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
                 android:background="@color/Orange"
-                android:text="@string/ReservationString"
+                android:text="@string/reservationString"
                 android:textColor="@color/White"
                 android:textSize="20sp"
                 android:textStyle="bold" />

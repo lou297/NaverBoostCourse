@@ -10,9 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CommentWriteActivity extends AppCompatActivity {
-    private TextView MovieTitleView;
-    private ImageView ViewingClassImageView;
-    private EditText EditCommentView;
+    private TextView movieTitleView;
+    private ImageView viewingClassImageView;
+    private EditText editCommentView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,22 +23,23 @@ public class CommentWriteActivity extends AppCompatActivity {
         readIntent();
     }
     private void initView() {
-        MovieTitleView = findViewById(R.id.MovieTitle_CommentWrite);
-        ViewingClassImageView = findViewById(R.id.ViewingClassImageView_CommentWrite);
-        EditCommentView = findViewById(R.id.EditComment_CommentWrite);
-        Button SaveBut = findViewById(R.id.SaveBut_CommentWrite);
-        Button CancelBut = findViewById(R.id.CancelBut_CommentWrite);
+        movieTitleView = findViewById(R.id.movieTitle_CommentWrite);
+        viewingClassImageView = findViewById(R.id.viewingClassImageView_CommentWrite);
+        editCommentView = findViewById(R.id.editComment_CommentWrite);
+        Button saveBut = findViewById(R.id.saveBut_CommentWrite);
+        Button cancelBut = findViewById(R.id.cancelBut_CommentWrite);
 
-        SaveBut.setOnClickListener(new View.OnClickListener() {
+        saveBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 finish();
             }
         });
-        CancelBut.setOnClickListener(new View.OnClickListener() {
+        cancelBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                setResult(RESULT_CANCELED);
                 finish();
             }
         });
@@ -50,19 +51,19 @@ public class CommentWriteActivity extends AppCompatActivity {
             if(intent.hasExtra("MovieTitle") && intent.hasExtra("ViewingClass")){
                 String MovieTitle = intent.getStringExtra("MovieTitle");
                 int ViewingClass = intent.getIntExtra("ViewingClass",0);
-                MovieTitleView.setText(MovieTitle);
+                movieTitleView.setText(MovieTitle);
                 switch (ViewingClass){
                     case 0:
-                        ViewingClassImageView.setBackgroundResource(R.drawable.ic_all);
+                        viewingClassImageView.setBackgroundResource(R.drawable.ic_all);
                         break;
                     case 12:
-                        ViewingClassImageView.setBackgroundResource(R.drawable.ic_12);
+                        viewingClassImageView.setBackgroundResource(R.drawable.ic_12);
                         break;
                     case 15:
-                        ViewingClassImageView.setBackgroundResource(R.drawable.ic_15);
+                        viewingClassImageView.setBackgroundResource(R.drawable.ic_15);
                         break;
                     case 19:
-                        ViewingClassImageView.setBackgroundResource(R.drawable.ic_19);
+                        viewingClassImageView.setBackgroundResource(R.drawable.ic_19);
                         break;
                 }
             }

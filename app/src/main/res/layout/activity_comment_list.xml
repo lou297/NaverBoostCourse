@@ -21,7 +21,7 @@
             android:paddingTop="10dp">
 
             <TextView
-                android:id="@+id/MovieTitle_CommentList"
+                android:id="@+id/movieTitle_CommentList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -30,7 +30,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/ViewingClassImageView_CommentList"
+                android:id="@+id/viewingClassImageView_CommentList"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center" />
@@ -51,7 +51,7 @@
             android:paddingBottom="10dp">
 
             <RatingBar
-                android:id="@+id/CommentRatingBar_CommentLIst"
+                android:id="@+id/commentRatingBar_CommentLIst"
                 style="@style/Widget.AppCompat.RatingBar.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -61,14 +61,14 @@
                 android:stepSize="0.05" />
 
             <TextView
-                android:id="@+id/MovieCreditsView"
+                android:id="@+id/movieCreditsView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/NumOfReviewersView"
+                android:id="@+id/numOfReviewersView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
@@ -88,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="9"
-            android:text="@string/CommentString"
+            android:text="@string/commentString"
             android:textColor="@color/Dark"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -101,17 +101,17 @@
             android:src="@drawable/ic_review_selected" />
 
         <TextView
-            android:id="@+id/WriteCommentBut_CommentList"
+            android:id="@+id/writeCommentBut_CommentList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/WriteCommentString"
+            android:text="@string/writeCommentString"
             android:textColor="@color/Orange"
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <ListView
-        android:id="@+id/CommentListView_CommentList"
+        android:id="@+id/commentListView_CommentList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/White">

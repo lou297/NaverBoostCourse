@@ -2,6 +2,7 @@ package com.practice.mymovie1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.practice.mymovie1.Adapter.CommentAdapter;
 import com.practice.mymovie1.DataClass.CommentItem;
@@ -21,13 +23,13 @@ public class CommentListActivity extends AppCompatActivity {
     private final static int WRITE_COMMENT_FROM_LIST = 1001;
     private final static int[] ViewingClass = {0,12,15,19};// 관람 등급
 
-    private TextView MovieTitleView;
-    private ImageView ViewingClassImageView;
-    private RatingBar CommentRatingBar;
-    private TextView MovieCreditsView;
-    private TextView NumOfReviewersView;
-    private TextView WriteCommentView;
-    private ListView CommentListView;
+    private TextView movieTitleView;
+    private ImageView viewingClassImageView;
+    private RatingBar commentRatingBar;
+    private TextView movieCreditsView;
+    private TextView numOfReviewersView;
+    private TextView writeCommentView;
+    private ListView commentListView;
     private ArrayList<CommentItem> list;
 
     @Override
@@ -58,16 +60,15 @@ public class CommentListActivity extends AppCompatActivity {
         if(actionBar!=null)
             actionBar.setDisplayHomeAsUpEnabled(true);
 
-        MovieTitleView = findViewById(R.id.MovieTitle_CommentList);
-        ViewingClassImageView = findViewById(R.id.ViewingClassImageView_CommentList);
-        CommentRatingBar = findViewById(R.id.CommentRatingBar_CommentLIst);
-        MovieCreditsView = findViewById(R.id.MovieCreditsView);
-        NumOfReviewersView = findViewById(R.id.NumOfReviewersView);
+        movieTitleView = findViewById(R.id.movieTitle_CommentList);
+        viewingClassImageView = findViewById(R.id.viewingClassImageView_CommentList);
+        commentRatingBar = findViewById(R.id.commentRatingBar_CommentLIst);
+        movieCreditsView = findViewById(R.id.movieCreditsView);
+        numOfReviewersView = findViewById(R.id.numOfReviewersView);
 
-        WriteCommentView = findViewById(R.id.WriteCommentBut_CommentList);
-        CommentListView = findViewById(R.id.CommentListView_CommentList);
-
-        WriteCommentView.setOnClickListener(new View.OnClickListener() {
+        writeCommentView = findViewById(R.id.writeCommentBut_CommentList);
+        commentListView = findViewById(R.id.commentListView_CommentList);
+        writeCommentView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goToCommentWrite();
@@ -87,31 +88,31 @@ public class CommentListActivity extends AppCompatActivity {
                 int NumOfReviewers = intent.getIntExtra("NumOfReviewers",0);
                 list = intent.getParcelableArrayListExtra("CommentList");
 
-                MovieTitleView.setText(MovieTitle);
+                movieTitleView.setText(MovieTitle);
                 switch (ViewingClass){
                     case 0:
-                        ViewingClassImageView.setBackgroundResource(R.drawable.ic_all);
+                        viewingClassImageView.setBackgroundResource(R.drawable.ic_all);
                         break;
                     case 12:
-                        ViewingClassImageView.setBackgroundResource(R.drawable.ic_12);
+                        viewingClassImageView.setBackgroundResource(R.drawable.ic_12);
                         break;
                     case 15:
-                        ViewingClassImageView.setBackgroundResource(R.drawable.ic_15);
+                        viewingClassImageView.setBackgroundResource(R.drawable.ic_15);
                         break;
                     case 19:
-                        ViewingClassImageView.setBackgroundResource(R.drawable.ic_19);
+                        viewingClassImageView.setBackgroundResource(R.drawable.ic_19);
                         break;
                 }
-                CommentRatingBar.setRating(MovieCredits/2);
-                MovieCreditsView.setText(String.valueOf(MovieCredits));
+                commentRatingBar.setRating(MovieCredits/2);
+                movieCreditsView.setText(String.valueOf(MovieCredits));
 
                 //천 단위마다 ',' 넣어주기
                 DecimalFormat format = new DecimalFormat("###,###");
-                NumOfReviewersView.setText(String.format(getString(R.string.NumOfReviewers_CommentList),format.format(NumOfReviewers)));
+                numOfReviewersView.setText(String.format(getString(R.string.numOfReviewers_CommentList),format.format(NumOfReviewers)));
 
                 if(!list.isEmpty()){
                     CommentAdapter adapter = new CommentAdapter(this,list);
-                    CommentListView.setAdapter(adapter);
+                    commentListView.setAdapter(adapter);
                 }
             }
         }
@@ -122,5 +123,18 @@ public class CommentListActivity extends AppCompatActivity {
         intent.putExtra("MovieTitle","군도");
         intent.putExtra("ViewingClass",ViewingClass[2]);
         startActivityForResult(intent,WRITE_COMMENT_FROM_LIST);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode==WRITE_COMMENT_FROM_LIST){
+            if(resultCode==RESULT_OK){
+                Toast.makeText(this,"작성 확인 됨", Toast.LENGTH_SHORT).show();
+            }
+            else if(resultCode==RESULT_CANCELED) {
+                Toast.makeText(this,"작성 취소 됨", Toast.LENGTH_SHORT).show();
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.practice.mymovie1.Adapter.CommentAdapter;
 import com.practice.mymovie1.DataClass.CommentItem;
@@ -17,12 +18,12 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private final static int WRITE_COMMENT_FROM_MAIN = 1000;
     private final static int[] ViewingClass = {0,12,15,19};
-    private TextView ThumbUpRateText;
-    private TextView ThumbDownRateText;
-    private Button ThumbUp;
-    private Button ThumbDown;
-    private TextView WriteCommentBut;
-    private Button ViewAllCommentBut;
+    private TextView thumbUpRateText;
+    private TextView thumbDownRateText;
+    private Button thumbUp;
+    private Button thumbDown;
+    private TextView writeCommentBut;
+    private Button viewAllCommentBut;
 
     private int ThumbUpRate = 0;
     private int ThumbDownRate = 0;
@@ -41,25 +42,25 @@ public class MainActivity extends AppCompatActivity {
         list = new ArrayList<>();
         loadComment();
 
-        ThumbUp.setOnClickListener(new View.OnClickListener() {
+        thumbUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ControlThumbUpRate();
+                controlThumbUpRate();
             }
         });
-        ThumbDown.setOnClickListener(new View.OnClickListener() {
+        thumbDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ControlThumbDownRate();
+                controlThumbDownRate();
             }
         });
-        WriteCommentBut.setOnClickListener(new View.OnClickListener() {
+        writeCommentBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goToCommentWrite();
             }
         });
-        ViewAllCommentBut.setOnClickListener(new View.OnClickListener() {
+        viewAllCommentBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goToCommentList();
@@ -68,67 +69,67 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView(){
-        ThumbUpRateText = findViewById(R.id.ThumbUpRate);
-        ThumbDownRateText = findViewById(R.id.ThumbDownRate);
-        ThumbUp = findViewById(R.id.ThumbUpBut);
-        ThumbDown = findViewById(R.id.ThumbDownBut);
-        WriteCommentBut = findViewById(R.id.WriteCommentBut_Main);
-        ViewAllCommentBut = findViewById(R.id.ViewAllCommentBut);
+        thumbUpRateText = findViewById(R.id.thumbUpRate);
+        thumbDownRateText = findViewById(R.id.thumbDownRate);
+        thumbUp = findViewById(R.id.thumbUpBut);
+        thumbDown = findViewById(R.id.thumbDownBut);
+        writeCommentBut = findViewById(R.id.writeCommentBut_Main);
+        viewAllCommentBut = findViewById(R.id.viewAllCommentBut);
 
     }
 
     private void EnterMovieInfo(){
-        TextView MoviePlayDateView = findViewById(R.id.MoviePlayDateView);
-        MoviePlayDateView.setText(String.format(getString(R.string.MoviePlayDate),2014,7,23));
-        TextView MovieShowTimesView = findViewById(R.id.MovieShowTimesView);
-        MovieShowTimesView.setText(String.format(getString(R.string.MovieShowTimes),137));
-        TextView TicketRankView = findViewById(R.id.TicketRankView);
-        TicketRankView.setText(String.format(getString(R.string.TicketRank),5));
-        TextView TicketPercentsView = findViewById(R.id.TicketPercentsView);
-        TicketPercentsView.setText(String.format(getString(R.string.TicketPercents),1,8));
+        TextView moviePlayDateView = findViewById(R.id.moviePlayDateView);
+        moviePlayDateView.setText(String.format(getString(R.string.moviePlayDate),2014,7,23));
+        TextView movieShowTimesView = findViewById(R.id.movieShowTimesView);
+        movieShowTimesView.setText(String.format(getString(R.string.movieShowTimes),137));
+        TextView ticketRankView = findViewById(R.id.ticketRankView);
+        ticketRankView.setText(String.format(getString(R.string.ticketRank),5));
+        TextView ticketPercentsView = findViewById(R.id.ticketPercentsView);
+        ticketPercentsView.setText(String.format(getString(R.string.ticketPercents),1,8));
     }
 
     private void loadComment(){
         if(list!=null){
-            list.add(new CommentItem("kim71**","10분 전",4.0F,"적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요."));
-            list.add(new CommentItem("aaa123**","1시간 전",0.5F,"너무 재미없다"));
-            list.add(new CommentItem("kim71**","10분 전",3.5F,"적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요."));
-            list.add(new CommentItem("kim71**","10분 전",2.1F,"적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요."));
+            list.add(new CommentItem("kim71**", "10분 전", 4.0F, "적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요."));
+            list.add(new CommentItem("aaa123**", "1시간 전", 0.5F, "너무 재미없다"));
+            list.add(new CommentItem("kim71**", "10분 전", 3.5F, "적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요."));
+            list.add(new CommentItem("kim71**", "10분 전", 2.1F, "적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요."));
 
             CommentAdapter adapter = new CommentAdapter(this,list);
-            ListView listView = findViewById(R.id.CommentListView_Main);
+            ListView listView = findViewById(R.id.commentListView_Main);
             listView.setAdapter(adapter);
         }
     }
 
-    private void ControlThumbUpRate() {
+    private void controlThumbUpRate() {
         if(ThumbUpCond){
             ThumbUpRate--;
             ThumbUpCond = false;
-            ThumbUp.setBackgroundResource(R.drawable.ic_thumb_up);
+            thumbUp.setBackgroundResource(R.drawable.ic_thumb_up);
         } else{
             ThumbUpRate++;
             ThumbUpCond = true;
-            ThumbUp.setBackgroundResource(R.drawable.ic_thumb_up_selected);
+            thumbUp.setBackgroundResource(R.drawable.ic_thumb_up_selected);
             if(ThumbDownCond)
-                ControlThumbDownRate();
+                controlThumbDownRate();
         }
-        ThumbUpRateText.setText(String.valueOf(ThumbUpRate));
+        thumbUpRateText.setText(String.valueOf(ThumbUpRate));
     }
 
-    private void ControlThumbDownRate() {
+    private void controlThumbDownRate() {
         if(ThumbDownCond){
             ThumbDownRate--;
             ThumbDownCond = false;
-            ThumbDown.setBackgroundResource(R.drawable.ic_thumb_down);
+            thumbDown.setBackgroundResource(R.drawable.ic_thumb_down);
         } else {
             ThumbDownRate++;
             ThumbDownCond = true;
-            ThumbDown.setBackgroundResource(R.drawable.ic_thumb_down_selected);
+            thumbDown.setBackgroundResource(R.drawable.ic_thumb_down_selected);
             if(ThumbUpCond)
-                ControlThumbUpRate();
+                controlThumbUpRate();
         }
-        ThumbDownRateText.setText(String.valueOf(ThumbDownRate));
+        thumbDownRateText.setText(String.valueOf(ThumbDownRate));
     }
 
     private void goToCommentList(){
@@ -150,6 +151,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode==WRITE_COMMENT_FROM_MAIN){
+            if(resultCode==RESULT_OK){
+                Toast.makeText(this,"작성 확인 됨", Toast.LENGTH_SHORT).show();
+            }
+            else if(resultCode==RESULT_CANCELED) {
+                Toast.makeText(this,"작성 취소 됨", Toast.LENGTH_SHORT).show();
+            }
+        }
         super.onActivityResult(requestCode, resultCode, data);
     }
 }

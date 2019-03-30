@@ -7,21 +7,21 @@
     <string name="commentWrite_label">한줄평 작성</string>
 
     <!--Movie MainActivity-->
-    <string name="MovieTitle">군도</string>
-    <string name="MoviePlayDate">%d.%d.%d</string>
-    <string name="MoviePlayDateString">개봉</string>
-    <string name="MovieGenre">액션</string>
-    <string name="MovieShowTimes">%d 분</string>
+    <string name="movieTitle">군도</string>
+    <string name="moviePlayDate">%d.%d.%d</string>
+    <string name="moviePlayDateString">개봉</string>
+    <string name="movieGenre">액션</string>
+    <string name="movieShowTimes">%d 분</string>
 
-    <string name="TicketSales">예매율</string>
-    <string name="TicketRank">%d위</string>
-    <string name="TicketPercents">%d.%d%%</string>
-    <string name="MovieCredits">8.2</string>
-    <string name="MovieCreditsString">평점</string>
-    <string name="TotalAttendance">839,399</string>
-    <string name="TotalAttendanceString">누적관객수</string>
+    <string name="ticketSales">예매율</string>
+    <string name="ticketRank">%d위</string>
+    <string name="ticketPercents">%d.%d%%</string>
+    <string name="movieCredits">8.2</string>
+    <string name="movieCreditsString">평점</string>
+    <string name="totalAttendance">839,399</string>
+    <string name="totalAttendanceString">누적관객수</string>
 
-    <string name="StoryLine">군도, 백성을 구하라!\n
+    <string name="storyLine">군도, 백성을 구하라!\n
         양반과 탐관오리들의 착취가 극에 달했던 조선 철종 13년. 힘 없는 백성의 편이 되어
         세상을 바로잡고자 하는 의적떼인 군도(群盜), 지리산 추설이 있었다.\n\n
 
@@ -34,31 +34,31 @@
         뭉치면 백성, 흩어지면 도적!\n
         망할 세상을 뒤집기 위해, 백성이 주인인 새 세상을 향해 도치를 필두로 한 군도는 백성의 적,
         조윤과 한 판 승부를 시작하는데&#8230;</string>
-    <string name="StoryLineString">줄거리</string>
+    <string name="storyLineString">줄거리</string>
 
-    <string name="DirectorAndActorString">감독/출연</string>
-    <string name="Director">윤종빈</string>
-    <string name="DirectorString">감독</string>
-    <string name="Actor">하정우(도치), 강동원(조윤)</string>
-    <string name="ActorString">출연</string>
+    <string name="directorAndActorString">감독/출연</string>
+    <string name="director">윤종빈</string>
+    <string name="directorString">감독</string>
+    <string name="actor">하정우(도치), 강동원(조윤)</string>
+    <string name="actorString">출연</string>
 
 
     <!--Comment Item-->
-    <string name="CommentString">한줄평</string>
-    <string name="WriteCommentString">작성하기</string>
-    <string name="SeeAllComment">모두 보기</string>
-    <string name="ReservationString">예매하기</string>
+    <string name="commentString">한줄평</string>
+    <string name="writeCommentString">작성하기</string>
+    <string name="seeAllComment">모두 보기</string>
+    <string name="reservationString">예매하기</string>
 
-    <string name="RecommendString">추천 %d </string>
-    <string name="ReportString">신고하기</string>
+    <string name="recommendString">추천 0 </string>
+    <string name="reportString">신고하기</string>
 
     <!--Comment List-->
-    <string name="NumOfReviewers_CommentList">(%s명 참여)</string>
+    <string name="numOfReviewers_CommentList">(%s명 참여)</string>
 
     <!--Comment Write-->
-    <string name="EnterARatingString">평점을 입력해 주세요</string>
-    <string name="WithinHundredCharString">100자 이내로 작성해주세요.</string>
-    <string name="Save">저장</string>
-    <string name="Cancel">취소</string>
+    <string name="enterARatingString">평점을 입력해 주세요</string>
+    <string name="withinHundredCharString">100자 이내로 작성해주세요.</string>
+    <string name="save">저장</string>
+    <string name="cancel">취소</string>
 
 </resources>

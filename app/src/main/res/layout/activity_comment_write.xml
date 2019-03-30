@@ -11,7 +11,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/MovieTitle_CommentWrite"
+            android:id="@+id/movieTitle_CommentWrite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -19,7 +19,7 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/ViewingClassImageView_CommentWrite"
+            android:id="@+id/viewingClassImageView_CommentWrite"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
@@ -34,7 +34,7 @@
         android:background="@color/Gray" />
 
     <RatingBar
-        android:id="@+id/CommentRatingBar_CommentWrite"
+        android:id="@+id/commentRatingBar_CommentWrite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -46,17 +46,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/EnterARatingString"
+        android:text="@string/enterARatingString"
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/EditComment_CommentWrite"
+        android:id="@+id/editComment_CommentWrite"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_margin="15dp"
         android:background="@drawable/orange_rounded_border"
         android:gravity="top"
-        android:hint="@string/WithinHundredCharString"
+        android:hint="@string/withinHundredCharString"
         android:maxLength="100"
         android:padding="10dp"
         android:textSize="20sp" />
@@ -68,7 +68,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/SaveBut_CommentWrite"
+            android:id="@+id/saveBut_CommentWrite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
@@ -77,11 +77,11 @@
             android:paddingTop="15dp"
             android:paddingEnd="35dp"
             android:paddingBottom="15dp"
-            android:text="@string/Save"
+            android:text="@string/save"
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/CancelBut_CommentWrite"
+            android:id="@+id/cancelBut_CommentWrite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="15dp"
@@ -90,7 +90,7 @@
             android:paddingTop="15dp"
             android:paddingEnd="35dp"
             android:paddingBottom="15dp"
-            android:text="@string/Cancel"
+            android:text="@string/cancel"
             android:textSize="18sp" />
     </LinearLayout>
 

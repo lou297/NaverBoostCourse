@@ -10,10 +10,10 @@ import com.practice.mymovie1.DataClass.CommentItem;
 import com.practice.mymovie1.R;
 
 public class CommentView extends LinearLayout {
-    private TextView CommentIdView;
-    private TextView CommentTimeView;
-    private RatingBar CommentRatingBar;
-    private TextView CommentView;
+    private TextView commentIdView;
+    private TextView commentTimeView;
+    private RatingBar commentRatingBar;
+    private TextView commentView;
     public CommentView(Context context) {
         super(context);
         init(context);
@@ -23,10 +23,10 @@ public class CommentView extends LinearLayout {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.comment_item_view,this,true);
 
-        CommentIdView = findViewById(R.id.CommentIdView);
-        CommentTimeView = findViewById(R.id.CommentTimeView);
-        CommentRatingBar = findViewById(R.id.CommentRatingBar_ItemView);
-        CommentView  = findViewById(R.id.CommentView);
+        commentIdView = findViewById(R.id.commentIdView);
+        commentTimeView = findViewById(R.id.commentTimeView);
+        commentRatingBar = findViewById(R.id.commentRatingBar_ItemView);
+        commentView  = findViewById(R.id.commentView);
     }
 
     public void setCommentInfo(CommentItem item) {
@@ -34,11 +34,11 @@ public class CommentView extends LinearLayout {
         String Time = item.getCommentTime();
         float Rating = item.getCommentRating();
         String Comment = item.getComment();
-        CommentIdView.setText(ID);
-        CommentTimeView.setText(Time);
+        commentIdView.setText(ID);
+        commentTimeView.setText(Time);
         if(Rating>=0 && Rating<=5.0)
-            CommentRatingBar.setRating(Rating);
-        CommentView.setText(Comment);
+            commentRatingBar.setRating(Rating);
+        commentView.setText(Comment);
     }
 
 
